@@ -1,0 +1,270 @@
+[
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "shutil",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "shutil",
+        "description": "shutil",
+        "detail": "shutil",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "exists",
+        "importPath": "os.path",
+        "description": "os.path",
+        "isExtraImport": true,
+        "detail": "os.path",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "gspread",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "gspread",
+        "description": "gspread",
+        "detail": "gspread",
+        "documentation": {}
+    },
+    {
+        "label": "Credentials",
+        "importPath": "google.oauth2.service_account",
+        "description": "google.oauth2.service_account",
+        "isExtraImport": true,
+        "detail": "google.oauth2.service_account",
+        "documentation": {}
+    },
+    {
+        "label": "get_versions",
+        "kind": 2,
+        "importPath": ".vscode.arctictern",
+        "description": ".vscode.arctictern",
+        "peekOfCode": "def get_versions():\n    if exists(\".vscode/version.txt\"):\n        with open(\".vscode/version.txt\", \"r\") as f:\n            THIS_VERSION = float(f.read().strip())\n    else:\n        with open(\".vscode/version.txt\", \"w\") as f:\n            f.write(str(THIS_VERSION))\n    r = requests.get(BASE_URL + \".vscode/version.txt\")\n    CURRENT_VERSION = float(r.content)\n    return {\"this_version\": THIS_VERSION,",
+        "detail": ".vscode.arctictern",
+        "documentation": {}
+    },
+    {
+        "label": "needs_upgrade",
+        "kind": 2,
+        "importPath": ".vscode.arctictern",
+        "description": ".vscode.arctictern",
+        "peekOfCode": "def needs_upgrade():\n    \"\"\"\n    Checks the version of the current template against\n    this version.\n    Returns True if upgrade is needed, False if not.\n    \"\"\"\n    versions = get_versions()\n    print(f\"Upstream version: {versions['current_version']}\")\n    print(f\"Local version: {versions['this_version']}\")\n    return versions[\"current_version\"] > versions[\"this_version\"]",
+        "detail": ".vscode.arctictern",
+        "documentation": {}
+    },
+    {
+        "label": "write_version",
+        "kind": 2,
+        "importPath": ".vscode.arctictern",
+        "description": ".vscode.arctictern",
+        "peekOfCode": "def write_version():\n    versions = get_versions()\n    with open(\".vscode/version.txt\", \"w\") as f:\n        f.write(str(versions[\"current_version\"]))\ndef build_post_upgrade():\n    r = requests.get(BASE_URL + \".vscode/upgrades.json\")\n    upgrades = json.loads(r.content.decode(\"utf-8\"))\n    content = \"\"\n    for k,v in upgrades.items():\n        if float(k) > THIS_VERSION:",
+        "detail": ".vscode.arctictern",
+        "documentation": {}
+    },
+    {
+        "label": "build_post_upgrade",
+        "kind": 2,
+        "importPath": ".vscode.arctictern",
+        "description": ".vscode.arctictern",
+        "peekOfCode": "def build_post_upgrade():\n    r = requests.get(BASE_URL + \".vscode/upgrades.json\")\n    upgrades = json.loads(r.content.decode(\"utf-8\"))\n    content = \"\"\n    for k,v in upgrades.items():\n        if float(k) > THIS_VERSION:\n            print(f\"Adding version changes for {k} to post_upgrade.sh\")\n            content += v\n    if content:\n        content += FINAL_LINES",
+        "detail": ".vscode.arctictern",
+        "documentation": {}
+    },
+    {
+        "label": "process",
+        "kind": 2,
+        "importPath": ".vscode.arctictern",
+        "description": ".vscode.arctictern",
+        "peekOfCode": "def process(file, suffix):\n    \"\"\"\n    Replaces and optionally backs up the files that\n    need to be changed.\n    Arguments: file - a path and filename\n               suffix - the suffix to the BASE_URL\n    \"\"\"\n    if file == \".gitpod.dockerfile\" or file == \".gitpod.yml\":\n        try:\n            shutil.copyfile(file, f\"{file}.tmp\")",
+        "detail": ".vscode.arctictern",
+        "documentation": {}
+    },
+    {
+        "label": "start_migration",
+        "kind": 2,
+        "importPath": ".vscode.arctictern",
+        "description": ".vscode.arctictern",
+        "peekOfCode": "def start_migration():\n    \"\"\"\n    Calls the process function and\n    renames the directory\n    \"\"\"\n    push_and_recreate = False\n    if not os.path.isdir(\".vscode\"):\n        print(\"Creating .vscode directory\")\n        os.mkdir(\".vscode\")\n    for file in UPGRADE_FILE_LIST:",
+        "detail": ".vscode.arctictern",
+        "documentation": {}
+    },
+    {
+        "label": "COLOURS",
+        "kind": 5,
+        "importPath": ".vscode.arctictern",
+        "description": ".vscode.arctictern",
+        "peekOfCode": "COLOURS = {\"red\": \"\\033[31m\",\n           \"blue\": \"\\033[34m\",\n           \"green\": \"\\033[32m\",\n           \"reset\": \"\\033[0m\",\n           \"bold\": \"\\033[1m\"}\nBASE_URL = \"https://raw.githubusercontent.com/Code-Institute-Org/gitpod-full-template/main/\"\nCURRENT_VERSION = 1.0\nTHIS_VERSION = 1.0\nUPGRADE_FILE_LIST = [{\"filename\": \".vscode/settings.json\",\n                      \"url\": \".vscode/settings.json\"",
+        "detail": ".vscode.arctictern",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_URL",
+        "kind": 5,
+        "importPath": ".vscode.arctictern",
+        "description": ".vscode.arctictern",
+        "peekOfCode": "BASE_URL = \"https://raw.githubusercontent.com/Code-Institute-Org/gitpod-full-template/main/\"\nCURRENT_VERSION = 1.0\nTHIS_VERSION = 1.0\nUPGRADE_FILE_LIST = [{\"filename\": \".vscode/settings.json\",\n                      \"url\": \".vscode/settings.json\"\n                      },\n                     {\"filename\": \".vscode/launch.json\",\n                      \"url\": \".vscode/launch.json\"\n                      },\n                     {\"filename\": \".gitpod.yml\",",
+        "detail": ".vscode.arctictern",
+        "documentation": {}
+    },
+    {
+        "label": "CURRENT_VERSION",
+        "kind": 5,
+        "importPath": ".vscode.arctictern",
+        "description": ".vscode.arctictern",
+        "peekOfCode": "CURRENT_VERSION = 1.0\nTHIS_VERSION = 1.0\nUPGRADE_FILE_LIST = [{\"filename\": \".vscode/settings.json\",\n                      \"url\": \".vscode/settings.json\"\n                      },\n                     {\"filename\": \".vscode/launch.json\",\n                      \"url\": \".vscode/launch.json\"\n                      },\n                     {\"filename\": \".gitpod.yml\",\n                      \"url\": \".gitpod.yml\"",
+        "detail": ".vscode.arctictern",
+        "documentation": {}
+    },
+    {
+        "label": "THIS_VERSION",
+        "kind": 5,
+        "importPath": ".vscode.arctictern",
+        "description": ".vscode.arctictern",
+        "peekOfCode": "THIS_VERSION = 1.0\nUPGRADE_FILE_LIST = [{\"filename\": \".vscode/settings.json\",\n                      \"url\": \".vscode/settings.json\"\n                      },\n                     {\"filename\": \".vscode/launch.json\",\n                      \"url\": \".vscode/launch.json\"\n                      },\n                     {\"filename\": \".gitpod.yml\",\n                      \"url\": \".gitpod.yml\"\n                      },",
+        "detail": ".vscode.arctictern",
+        "documentation": {}
+    },
+    {
+        "label": "UPGRADE_FILE_LIST",
+        "kind": 5,
+        "importPath": ".vscode.arctictern",
+        "description": ".vscode.arctictern",
+        "peekOfCode": "UPGRADE_FILE_LIST = [{\"filename\": \".vscode/settings.json\",\n                      \"url\": \".vscode/settings.json\"\n                      },\n                     {\"filename\": \".vscode/launch.json\",\n                      \"url\": \".vscode/launch.json\"\n                      },\n                     {\"filename\": \".gitpod.yml\",\n                      \"url\": \".gitpod.yml\"\n                      },\n                     {\"filename\": \".gitpod.dockerfile\",",
+        "detail": ".vscode.arctictern",
+        "documentation": {}
+    },
+    {
+        "label": "FINAL_LINES",
+        "kind": 5,
+        "importPath": ".vscode.arctictern",
+        "description": ".vscode.arctictern",
+        "peekOfCode": "FINAL_LINES = \"\\nexport POST_UPGRADE_RUN=1\\nsource ~/.bashrc\\n\"\ndef get_versions():\n    if exists(\".vscode/version.txt\"):\n        with open(\".vscode/version.txt\", \"r\") as f:\n            THIS_VERSION = float(f.read().strip())\n    else:\n        with open(\".vscode/version.txt\", \"w\") as f:\n            f.write(str(THIS_VERSION))\n    r = requests.get(BASE_URL + \".vscode/version.txt\")\n    CURRENT_VERSION = float(r.content)",
+        "detail": ".vscode.arctictern",
+        "documentation": {}
+    },
+    {
+        "label": "cloud_name",
+        "kind": 5,
+        "importPath": ".vscode.make_url",
+        "description": ".vscode.make_url",
+        "peekOfCode": "cloud_name = re.findall(r\"['](.*?)[']\",content[15])[0]\napi_key = re.findall(r\"['](.*?)[']\",content[16])[0]\napi_secret = re.findall(r\"['](.*?)[']\",content[17])[0]\nprint(f\"cloudinary://{api_key}:{api_secret}@{cloud_name}\")",
+        "detail": ".vscode.make_url",
+        "documentation": {}
+    },
+    {
+        "label": "api_key",
+        "kind": 5,
+        "importPath": ".vscode.make_url",
+        "description": ".vscode.make_url",
+        "peekOfCode": "api_key = re.findall(r\"['](.*?)[']\",content[16])[0]\napi_secret = re.findall(r\"['](.*?)[']\",content[17])[0]\nprint(f\"cloudinary://{api_key}:{api_secret}@{cloud_name}\")",
+        "detail": ".vscode.make_url",
+        "documentation": {}
+    },
+    {
+        "label": "api_secret",
+        "kind": 5,
+        "importPath": ".vscode.make_url",
+        "description": ".vscode.make_url",
+        "peekOfCode": "api_secret = re.findall(r\"['](.*?)[']\",content[17])[0]\nprint(f\"cloudinary://{api_key}:{api_secret}@{cloud_name}\")",
+        "detail": ".vscode.make_url",
+        "documentation": {}
+    },
+    {
+        "label": "SCOPE",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "SCOPE = [ \"https://www.googleapis.com/auth/spreadsheets\",\n        \"https://www.googleapis.com/auth/drive.file\",\n        \"https://www.googleapis.com/auth/drive\" ]\n#Authenticate the code to access the Company Google-spreadsheet\nCREDS = Credentials.from_service_account_file('creds.json') \nSCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "CREDS",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "CREDS = Credentials.from_service_account_file('creds.json') \nSCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "SCOPED_CREDS",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "SCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "GSPREAD_CLIENT",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "SHEET",
+        "kind": 5,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "SHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')",
+        "detail": "run",
+        "documentation": {}
+    }
+]
