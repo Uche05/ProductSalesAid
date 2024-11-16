@@ -80,8 +80,27 @@ def update_company_data(company, worksheet):
     print(f"{worksheet} is updating.....")
     print("Done!")
 
-def get_sales_data(company):
-    pass
+def get_email():
+    """
+    Obtains the email of the company from the company_name
+    
+    Args:
+        company (str): Name of the company.
+    
+    Returns:
+        str: Email of the company.
+    """
+    company = input("Enter your company's email: ")
+    email_regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+    emails = re.findall(email_regex, company)
+        
+    if emails:
+        return emails[0]
+    else:
+        print("Your company might not receive an email of your reciept!!")
+        return "No email found for the given company name"
+
+
 
 def main():
     """
