@@ -25,6 +25,7 @@ def welcome():
     print("Welcome to the Product Sales Aid!")
     print("This program will help you analyze product sales data......")
     
+
 def get_company_data():
     """
     Obtains the company basic data of company_name and country
@@ -32,19 +33,46 @@ def get_company_data():
     Returns:
         list: [company_name,country_of_company]
     """
-    print("Enter the name of your company and country, seperated by commas\n")
-    print("Like this: companyName,compnayCountry ")
-    company = input("Enter the name of the company, and country: ")
-    validate(company)
-    company = company.split(",")
-    return (company)
+    while True:
+        print("Enter the name of your company and country, separated by commas\n")
+        print("Like this: companyName,companyCountry ")
+        company = input("Enter the name of the company, and country: ")
+        company = company.split(",")
+        
+        if validate(company):
+            print("Data is valid")
+            break
+        
+    return company
+
+def validate(values):
+    """
+    Validates the input data to ensure it contains exactly two values.
+    
+    Args:
+        values (list): List containing company name and country.
+    
+    Returns:
+        bool: True if valid, False otherwise.
+    """
+    try:
+        [str(value) for value in values]
+        if len(values) != 2:
+            raise ValueError(
+                "Exactly 2 values required: Company and country!"
+            )
+    except ValueError as e:
+        print(f"Error: {e}. Please try Again!!")
+        return False
+    return True
 
 def update_company_data(company, worksheet):
     """
-    Receives a list of company detials and
-    Updates the company data in spreadsheet in needed worksheet
+    Receives a list of company details and
+    Updates the company data in spreadsheet in needed worksheet.
+    
     Args:
-        company (type: list): A list containg two values
+        company (list): A list containing two values.
     """
     print("Updating the spreadsheet.....")
     sheet_to_update = SHEET.worksheet(worksheet)
@@ -57,10 +85,14 @@ def get_sales_data(company):
 
 def main():
     """
-    Executes all program functions
+    Executes all program functions.
     """
     company_data = get_company_data()
-    update_company_data(company_data, "INFO1")
+    
+    if validate(company_data):
+        update_company_data(company_data, "INFO1")
+    else:
+        print("Try again!!!")
     
     
 if __name__ == "__main__":

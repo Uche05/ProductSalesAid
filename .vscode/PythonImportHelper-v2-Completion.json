@@ -236,7 +236,16 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def get_company_data():\n    \"\"\"\n    Obtains the company basic data of company_name and country\n    Returns:\n        list: [company_name,country_of_company]\n    \"\"\"\n    print(\"Enter the name of your company and country, seperated by commas\\n\")\n    print(\"Like this: companyName,compnayCountry \")\n    company = input(\"Enter the name of the company, and country: \")\n    validate(company)",
+        "peekOfCode": "def get_company_data():\n    \"\"\"\n    Obtains the company basic data of company_name and country\n    Returns:\n        list: [company_name,country_of_company]\n    \"\"\"\n    while True:\n        print(\"Enter the name of your company and country, separated by commas\\n\")\n        print(\"Like this: companyName,companyCountry \")\n        company = input(\"Enter the name of the company, and country: \")",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "validate",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def validate(values):\n    \"\"\"\n    Validates the input data to ensure it contains exactly two values.\n    Args:\n        values (list): List containing company name and country.\n    Returns:\n        bool: True if valid, False otherwise.\n    \"\"\"\n    try:\n        [str(value) for value in values]",
         "detail": "run",
         "documentation": {}
     },
@@ -245,7 +254,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def update_company_data(company, worksheet):\n    \"\"\"\n    Receives a list of company detials and\n    Updates the company data in spreadsheet in needed worksheet\n    Args:\n        company (type: list): A list containg two values\n    \"\"\"\n    print(\"Updating the spreadsheet.....\")\n    sheet_to_update = SHEET.worksheet(worksheet)\n    sheet_to_update.append_row(company)",
+        "peekOfCode": "def update_company_data(company, worksheet):\n    \"\"\"\n    Receives a list of company details and\n    Updates the company data in spreadsheet in needed worksheet.\n    Args:\n        company (list): A list containing two values.\n    \"\"\"\n    print(\"Updating the spreadsheet.....\")\n    sheet_to_update = SHEET.worksheet(worksheet)\n    sheet_to_update.append_row(company)",
         "detail": "run",
         "documentation": {}
     },
@@ -254,7 +263,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def get_sales_data(company):\n    pass\ndef main():\n    \"\"\"\n    Executes all program functions\n    \"\"\"\n    company_data = get_company_data()\n    update_company_data(company_data, \"INFO1\")\nif __name__ == \"__main__\":\n    main()",
+        "peekOfCode": "def get_sales_data(company):\n    pass\ndef main():\n    \"\"\"\n    Executes all program functions.\n    \"\"\"\n    company_data = get_company_data()\n    if validate(company_data):\n        update_company_data(company_data, \"INFO1\")\n    else:",
         "detail": "run",
         "documentation": {}
     },
@@ -263,7 +272,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def main():\n    \"\"\"\n    Executes all program functions\n    \"\"\"\n    company_data = get_company_data()\n    update_company_data(company_data, \"INFO1\")\nif __name__ == \"__main__\":\n    main()",
+        "peekOfCode": "def main():\n    \"\"\"\n    Executes all program functions.\n    \"\"\"\n    company_data = get_company_data()\n    if validate(company_data):\n        update_company_data(company_data, \"INFO1\")\n    else:\n        print(\"Try again!!!\")\nif __name__ == \"__main__\":",
         "detail": "run",
         "documentation": {}
     },
