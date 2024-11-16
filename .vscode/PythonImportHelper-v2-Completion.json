@@ -245,7 +245,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def update_company_data(company):\n    pass\ndef get_sales_data(company):\n    pass",
+        "peekOfCode": "def update_company_data(company, worksheet):\n    \"\"\"\n    Receives a list of company detials and\n    Updates the company data in spreadsheet in needed worksheet\n    Args:\n        company (type: list): A list containg two values\n    \"\"\"\n    print(\"Updating the spreadsheet.....\")\n    sheet_to_update = SHEET.worksheet(worksheet)\ndef get_sales_data(company):",
         "detail": "run",
         "documentation": {}
     },
@@ -254,7 +254,16 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def get_sales_data(company):\n    pass",
+        "peekOfCode": "def get_sales_data(company):\n    pass\ndef main():\n    \"\"\"\n    Executes all program functions\n    \"\"\"\nget_company_data()",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def main():\n    \"\"\"\n    Executes all program functions\n    \"\"\"\nget_company_data()",
         "detail": "run",
         "documentation": {}
     },

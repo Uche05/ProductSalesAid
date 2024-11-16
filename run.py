@@ -36,13 +36,24 @@ def get_company_data():
     print("Like this: companyName,compnayCountry ")
     company = input("Enter the name of the company, and country: ")
     company = company.split(",")
-    return company
+    return (company, "INFO1")
 
-def update_company_data(company):
-    pass
+def update_company_data(company, worksheet):
+    """
+    Receives a list of company detials and
+    Updates the company data in spreadsheet in needed worksheet
+    Args:
+        company (type: list): A list containg two values
+    """
+    print("Updating the spreadsheet.....")
+    sheet_to_update = SHEET.worksheet(worksheet)
 
 def get_sales_data(company):
     pass
 
+def main():
+    """
+    Executes all program functions
+    """
 
-
+get_company_data()
