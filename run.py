@@ -18,5 +18,31 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 #Open the spreadsheet
 SHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')
 
+def welcome():
+    """
+    Presents a simple welcome message to the user.
+    """
+    print("Welcome to the Product Sales Aid!")
+    print("This program will help you analyze product sales data......")
+    
+def get_company_data():
+    """
+    Obtains the company basic data of company_name and country
+    
+    Returns:
+        list: [company_name,country_of_company]
+    """
+    print("Enter the name of your company and country, seperated by commas\n")
+    print("Like this: companyName,compnayCountry ")
+    company = input("Enter the name of the company, and country: ")
+    company = company.split(",")
+    return company
+
+def update_company_data(company):
+    pass
+
+def get_sales_data(company):
+    pass
+
 
 

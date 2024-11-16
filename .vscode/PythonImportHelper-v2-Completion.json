@@ -223,11 +223,47 @@
         "documentation": {}
     },
     {
+        "label": "welcome",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def welcome():\n    \"\"\"\n    Presents a simple welcome message to the user.\n    \"\"\"\n    print(\"Welcome to the Product Sales Aid!\")\n    print(\"This program will help you analyze product sales data......\")\ndef get_company_data():\n    \"\"\"\n    Obtains the company basic data of company_name and country\n    Returns:",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "get_company_data",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def get_company_data():\n    \"\"\"\n    Obtains the company basic data of company_name and country\n    Returns:\n        list: [company_name,country_of_company]\n    \"\"\"\n    print(\"Enter the name of your company and country, seperated by commas\\n\")\n    print(\"Like this: companyName,compnayCountry \")\n    company = input(\"Enter the name of the company, and country: \")\n    company = company.split(\",\")",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "update_company_data",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def update_company_data(company):\n    pass\ndef get_sales_data(company):\n    pass",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "get_sales_data",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def get_sales_data(company):\n    pass",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
         "label": "SCOPE",
         "kind": 5,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "SCOPE = [ \"https://www.googleapis.com/auth/spreadsheets\",\n        \"https://www.googleapis.com/auth/drive.file\",\n        \"https://www.googleapis.com/auth/drive\" ]\n#Authenticate the code to access the Company Google-spreadsheet\nCREDS = Credentials.from_service_account_file('creds.json') \nSCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')",
+        "peekOfCode": "SCOPE = [ \"https://www.googleapis.com/auth/spreadsheets\",\n        \"https://www.googleapis.com/auth/drive.file\",\n        \"https://www.googleapis.com/auth/drive\" ]\n#Authenticate the code to access the Company Google-spreadsheet\nCREDS = Credentials.from_service_account_file('creds.json') \nSCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():",
         "detail": "run",
         "documentation": {}
     },
@@ -236,7 +272,7 @@
         "kind": 5,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "CREDS = Credentials.from_service_account_file('creds.json') \nSCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')",
+        "peekOfCode": "CREDS = Credentials.from_service_account_file('creds.json') \nSCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():\n    \"\"\"\n    Presents a simple welcome message to the user.\n    \"\"\"\n    print(\"Welcome to the Product Sales Aid!\")",
         "detail": "run",
         "documentation": {}
     },
@@ -245,7 +281,7 @@
         "kind": 5,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "SCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')",
+        "peekOfCode": "SCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():\n    \"\"\"\n    Presents a simple welcome message to the user.\n    \"\"\"\n    print(\"Welcome to the Product Sales Aid!\")\n    print(\"This program will help you analyze product sales data......\")",
         "detail": "run",
         "documentation": {}
     },
@@ -254,7 +290,7 @@
         "kind": 5,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')",
+        "peekOfCode": "GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():\n    \"\"\"\n    Presents a simple welcome message to the user.\n    \"\"\"\n    print(\"Welcome to the Product Sales Aid!\")\n    print(\"This program will help you analyze product sales data......\")\ndef get_company_data():",
         "detail": "run",
         "documentation": {}
     },
@@ -263,7 +299,7 @@
         "kind": 5,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "SHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')",
+        "peekOfCode": "SHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():\n    \"\"\"\n    Presents a simple welcome message to the user.\n    \"\"\"\n    print(\"Welcome to the Product Sales Aid!\")\n    print(\"This program will help you analyze product sales data......\")\ndef get_company_data():\n    \"\"\"\n    Obtains the company basic data of company_name and country",
         "detail": "run",
         "documentation": {}
     }
