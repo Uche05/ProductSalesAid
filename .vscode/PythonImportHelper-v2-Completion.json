@@ -272,7 +272,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def update_company_data(company, worksheet):\n    \"\"\"\n    Receives a list of company details and\n    Updates the company data in spreadsheet in needed worksheet.\n    Args:\n        company (list): A list containing 6 values.\n    \"\"\"\n    print(\"Updating the spreadsheet.....\")\n    sheet_to_update = SHEET.worksheet(worksheet)\n    sheet_to_update.append_row(company)",
+        "peekOfCode": "def update_company_data(company, worksheet):\n    \"\"\"\n    Receives a list of company details and\n    Updates the company data in spreadsheet in needed worksheet.\n    Args:\n        input -> company (list): A list containing 6 values.\n    \"\"\"\n    print(\"Updating the spreadsheet.....\")\n    sheet_to_update = SHEET.worksheet(worksheet)\n    sheet_to_update.append_row(company)",
         "detail": "run",
         "documentation": {}
     },

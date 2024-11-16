@@ -115,7 +115,7 @@ def update_company_data(company, worksheet):
     Updates the company data in spreadsheet in needed worksheet.
 
     Args:
-        company (list): A list containing 6 values.
+        input -> company (list): A list containing 6 values.
     """
     print("Updating the spreadsheet.....")
     sheet_to_update = SHEET.worksheet(worksheet)
