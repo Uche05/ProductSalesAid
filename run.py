@@ -132,9 +132,10 @@ def main():
     company_data = get_company_data()
     email = get_email()
     product_data = get_numeric_data()
+    total_data = sum(product_data)
     print("Got all necessary data....")
 
-    additional_data = [email] + product_data
+    additional_data = [email] + product_data + [total_data]
     company_data.extend(additional_data)
     update_company_data(company_data, "INFO1")
     print("Done!")

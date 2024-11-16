@@ -281,7 +281,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def main():\n    \"\"\"\n    Executes all program functions.\n    \"\"\"\n    welcome()\n    company_data = get_company_data()\n    email = get_email()\n    product_data = get_numeric_data()\n    print(\"Got all necessary data....\")\n    additional_data = [email] + product_data",
+        "peekOfCode": "def main():\n    \"\"\"\n    Executes all program functions.\n    \"\"\"\n    welcome()\n    company_data = get_company_data()\n    email = get_email()\n    product_data = get_numeric_data()\n    total_data = sum(product_data)\n    print(\"Got all necessary data....\")",
         "detail": "run",
         "documentation": {}
     },
