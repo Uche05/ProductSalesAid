@@ -236,7 +236,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def get_company_data():\n    \"\"\"\n    Obtains the company basic data of company_name and country\n    Returns:\n        list: [company_name,country_of_company]\n    \"\"\"\n    while True:\n        print(\"Enter the name of your company and country, separated by commas\\n\")\n        print(\"Like this: companyName,companyCountry \")\n        company = input(\"Enter the name of the company, and country: \")",
+        "peekOfCode": "def get_company_data():\n    \"\"\"\n    Obtains the company basic data of company_name and country\n    Returns:\n        list: [company_name,country_of_company]\n    \"\"\"\n    while True:\n        print(\"Enter the name of your company, country, separated by commas\\n\")\n        print(\"Like this: companyName,companyCountry \")\n        company = input(\"Enter the name of the company, and country: \")",
         "detail": "run",
         "documentation": {}
     },
@@ -250,20 +250,11 @@
         "documentation": {}
     },
     {
-        "label": "update_company_data",
-        "kind": 2,
-        "importPath": "run",
-        "description": "run",
-        "peekOfCode": "def update_company_data(company, worksheet):\n    \"\"\"\n    Receives a list of company details and\n    Updates the company data in spreadsheet in needed worksheet.\n    Args:\n        company (list): A list containing two values.\n    \"\"\"\n    print(\"Updating the spreadsheet.....\")\n    sheet_to_update = SHEET.worksheet(worksheet)\n    sheet_to_update.append_row(company)",
-        "detail": "run",
-        "documentation": {}
-    },
-    {
         "label": "get_email",
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def get_email():\n    \"\"\"\n    Obtains the email of the company from the company_name\n    Args:\n        company (str): Name of the company.\n    Returns:\n        str: Email of the company.\n    \"\"\"\n    company_email = input(\"Enter your company's email: \")\n    email_regex = r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b'",
+        "peekOfCode": "def get_email():\n    \"\"\"\n    Obtains the email of the company from the company_name\n    Args:\n        input -> company (str): Name of the company.\n    Returns:\n        str: Email of the company.\n    \"\"\"\n    company_email = input(\"Enter your company's email: \")\n    email_regex = r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b'",
         "detail": "run",
         "documentation": {}
     },
@@ -272,7 +263,16 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def get_numeric_data():\n    \"\"\"\n    Obtains the number of products requested by the company\n    Args:\n    Returns:\n    \"\"\"\n    product = []\n    for i in range(1,4):\n        print(f\"Please enter the number of product{i} you want\")\n        product_no = input(f\"Please enter the number of product{i} you want: \")",
+        "peekOfCode": "def get_numeric_data():\n    \"\"\"\n    Obtains the number of products requested by the company\n    Args:\n        input -> company (int): Name of the company.\n    Returns:\n        list: Number of products required currently only 3\n    \"\"\"\n    product = []\n    for i in range(1, 4):",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "update_company_data",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def update_company_data(company, worksheet):\n    \"\"\"\n    Receives a list of company details and\n    Updates the company data in spreadsheet in needed worksheet.\n    Args:\n        company (list): A list containing 6 values.\n    \"\"\"\n    print(\"Updating the spreadsheet.....\")\n    sheet_to_update = SHEET.worksheet(worksheet)\n    sheet_to_update.append_row(company)",
         "detail": "run",
         "documentation": {}
     },
@@ -281,7 +281,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def main():\n    \"\"\"\n    Executes all program functions.\n    \"\"\"\n    company_data = get_company_data()\n    if validate(company_data):\n        update_company_data(company_data, \"INFO1\")\n    else:\n        print(\"Try again!!!\")\n#if __name__ == \"__main__\":",
+        "peekOfCode": "def main():\n    \"\"\"\n    Executes all program functions.\n    \"\"\"\n    welcome()\n    company_data = get_company_data()\n    email = get_email()\n    product_data = get_numeric_data()\n    print(\"Got all necessary data....\")\n    additional_data = [email] + product_data",
         "detail": "run",
         "documentation": {}
     },
@@ -290,7 +290,7 @@
         "kind": 5,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "SCOPE = [ \"https://www.googleapis.com/auth/spreadsheets\",\n        \"https://www.googleapis.com/auth/drive.file\",\n        \"https://www.googleapis.com/auth/drive\" ]\n#Authenticate the code to access the Company Google-spreadsheet\nCREDS = Credentials.from_service_account_file('creds.json') \nSCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():",
+        "peekOfCode": "SCOPE = [ \"https://www.googleapis.com/auth/spreadsheets\",\n        \"https://www.googleapis.com/auth/drive.file\",\n        \"https://www.googleapis.com/auth/drive\"]\n# Authenticate the code to access the Company Google-spreadsheet\nCREDS = Credentials.from_service_account_file('creds.json')\nSCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n# Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():",
         "detail": "run",
         "documentation": {}
     },
@@ -299,7 +299,7 @@
         "kind": 5,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "CREDS = Credentials.from_service_account_file('creds.json') \nSCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():\n    \"\"\"\n    Presents a simple welcome message to the user.\n    \"\"\"\n    print(\"Welcome to the Product Sales Aid!\")",
+        "peekOfCode": "CREDS = Credentials.from_service_account_file('creds.json')\nSCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n# Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():\n    \"\"\"\n    Presents a simple welcome message to the user.\n    \"\"\"\n    print(\"Welcome to the Product Sales Aid!\")",
         "detail": "run",
         "documentation": {}
     },
@@ -308,7 +308,7 @@
         "kind": 5,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "SCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():\n    \"\"\"\n    Presents a simple welcome message to the user.\n    \"\"\"\n    print(\"Welcome to the Product Sales Aid!\")\n    print(\"This program will help you analyze product sales data......\")",
+        "peekOfCode": "SCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n# Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():\n    \"\"\"\n    Presents a simple welcome message to the user.\n    \"\"\"\n    print(\"Welcome to the Product Sales Aid!\")\n    print(\"This program will help you analyze product sales data......\")",
         "detail": "run",
         "documentation": {}
     },
@@ -317,7 +317,7 @@
         "kind": 5,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n#Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():\n    \"\"\"\n    Presents a simple welcome message to the user.\n    \"\"\"\n    print(\"Welcome to the Product Sales Aid!\")\n    print(\"This program will help you analyze product sales data......\")\ndef get_company_data():",
+        "peekOfCode": "GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n# Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():\n    \"\"\"\n    Presents a simple welcome message to the user.\n    \"\"\"\n    print(\"Welcome to the Product Sales Aid!\")\n    print(\"This program will help you analyze product sales data......\")\ndef get_company_data():",
         "detail": "run",
         "documentation": {}
     },
