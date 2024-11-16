@@ -11,7 +11,6 @@ SCOPE = [
 ]
 
 
-
 # Authenticate the code to access the Company Google-spreadsheet
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
@@ -141,25 +140,22 @@ def get_data_from_sheet():
         A list of the most recent data entered.
     """
 
-    print("Please enter 1 for Yes or 2 for No")
-    user_input = input("Do you want to see the data you entered? ")
     while True:
         try:
+            print("Please enter 1 for Yes or 2 for No")
+            user_input = int(input("Wanna see the data you entered? "))
             if user_input == 2:
-                pass
+                return True
             elif user_input == 1:
                 sheet = SHEET.worksheet("INFO1")
-
                 data = sheet.get_all_values()
                 needed_data = data[-1]
-                # # Print the data
-                for row in needed_data:
-                    print(row)
-                return True
+                # Print the data
+                for item in needed_data:
+                    print(item)
+                return needed_data, True
             else:
                 raise ValueError(f"{user_input} is not 1 or 2 \n")
-                return False
-
         except ValueError as e:
             print(f"Error: {e}, please ensure you insert a valid number!\n")
 

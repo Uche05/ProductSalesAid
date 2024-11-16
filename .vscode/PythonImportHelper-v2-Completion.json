@@ -281,7 +281,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def get_data_from_sheet():\n    \"\"\"\n    Collects the data entered from the sheet\n    Returns:\n        A list of the most recent data entered.\n    \"\"\"\n    print(\"Please enter 1 for Yes or 2 for No\")\n    user_input = input(\"Do you want to see the data you entered? \")\n    while True:\n        try:",
+        "peekOfCode": "def get_data_from_sheet():\n    \"\"\"\n    Collects the data entered from the sheet\n    Returns:\n        A list of the most recent data entered.\n    \"\"\"\n    while True:\n        try:\n            print(\"Please enter 1 for Yes or 2 for No\")\n            user_input = int(input(\"Wanna see the data you entered? \"))",
         "detail": "run",
         "documentation": {}
     },
