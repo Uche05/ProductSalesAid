@@ -35,8 +35,9 @@ def get_company_data():
     print("Enter the name of your company and country, seperated by commas\n")
     print("Like this: companyName,compnayCountry ")
     company = input("Enter the name of the company, and country: ")
+    validate(company)
     company = company.split(",")
-    return (company, "INFO1")
+    return (company)
 
 def update_company_data(company, worksheet):
     """
@@ -47,6 +48,9 @@ def update_company_data(company, worksheet):
     """
     print("Updating the spreadsheet.....")
     sheet_to_update = SHEET.worksheet(worksheet)
+    sheet_to_update.append_row(company)
+    print(f"{worksheet} is updating.....")
+    print("Done!")
 
 def get_sales_data(company):
     pass
@@ -55,5 +59,9 @@ def main():
     """
     Executes all program functions
     """
-
-get_company_data()
+    company_data = get_company_data()
+    update_company_data(company_data, "INFO1")
+    
+    
+if __name__ == "__main__":
+    main()
