@@ -263,7 +263,16 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def get_email():\n    \"\"\"\n    Obtains the email of the company from the company_name\n    Args:\n        company (str): Name of the company.\n    Returns:\n        str: Email of the company.\n    \"\"\"\n    company = input(\"Enter your company's email: \")\n    email_regex = r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b'",
+        "peekOfCode": "def get_email():\n    \"\"\"\n    Obtains the email of the company from the company_name\n    Args:\n        company (str): Name of the company.\n    Returns:\n        str: Email of the company.\n    \"\"\"\n    company_email = input(\"Enter your company's email: \")\n    email_regex = r'\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b'",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "get_numeric_data",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def get_numeric_data():\n    \"\"\"\n    Obtains the number of products requested by the company\n    Args:\n    Returns:\n    \"\"\"\n    product = []\n    for i in range(1,4):\n        print(f\"Please enter the number of product{i} you want\")\n        product_no = input(f\"Please enter the number of product{i} you want: \")",
         "detail": "run",
         "documentation": {}
     },
@@ -272,7 +281,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def main():\n    \"\"\"\n    Executes all program functions.\n    \"\"\"\n    company_data = get_company_data()\n    if validate(company_data):\n        update_company_data(company_data, \"INFO1\")\n    else:\n        print(\"Try again!!!\")\nif __name__ == \"__main__\":",
+        "peekOfCode": "def main():\n    \"\"\"\n    Executes all program functions.\n    \"\"\"\n    company_data = get_company_data()\n    if validate(company_data):\n        update_company_data(company_data, \"INFO1\")\n    else:\n        print(\"Try again!!!\")\n#if __name__ == \"__main__\":",
         "detail": "run",
         "documentation": {}
     },

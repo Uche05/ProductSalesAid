@@ -90,9 +90,9 @@ def get_email():
     Returns:
         str: Email of the company.
     """
-    company = input("Enter your company's email: ")
+    company_email = input("Enter your company's email: ")
     email_regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
-    emails = re.findall(email_regex, company)
+    emails = re.findall(email_regex, company_email)
         
     if emails:
         return emails[0]
@@ -100,7 +100,30 @@ def get_email():
         print("Your company might not receive an email of your reciept!!")
         return "No email found for the given company name"
 
-
+def get_numeric_data():
+    """
+    Obtains the number of products requested by the company
+    
+    Args:
+        
+    
+    Returns:
+        
+    """
+    product = []
+    for i in range(1,4):
+        print(f"Please enter the number of product{i} you want")
+        product_no = input(f"Please enter the number of product{i} you want: ")
+        
+        try:
+            product.append(int(product_no))
+            if not int(product_no):
+                raise ValueError
+        except ValueError as e:
+            print(f"Error: {e}, please ensure you insert a number! \n Try Again!!!")
+        
+    return {product}
+    
 
 def main():
     """
@@ -114,5 +137,7 @@ def main():
         print("Try again!!!")
     
     
-if __name__ == "__main__":
-    main()
+#if __name__ == "__main__":
+#    main()
+
+get_numeric_data()
