@@ -277,11 +277,11 @@
         "documentation": {}
     },
     {
-        "label": "query_for_data",
+        "label": "get_data_from_sheet",
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def query_for_data():\n    #query for data\ndef main():\n    \"\"\"\n    Executes all program functions.\n    \"\"\"\n    welcome()\n    company_data = get_company_data()\n    email = get_email()\n    product_data = get_numeric_data()",
+        "peekOfCode": "def get_data_from_sheet():\n    \"\"\"\n    Collects the data entered from the sheet\n    Returns:\n        A list of the most recent data entered.\n    \"\"\"\n    print(\"Please enter 1 for Yes or 2 for No\")\n    user_input = input(\"Do you want to see the data you entered? \")\n    while True:\n        try:",
         "detail": "run",
         "documentation": {}
     },
@@ -299,7 +299,7 @@
         "kind": 5,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "SCOPE = [ \"https://www.googleapis.com/auth/spreadsheets\",\n        \"https://www.googleapis.com/auth/drive.file\",\n        \"https://www.googleapis.com/auth/drive\"]\n# Authenticate the code to access the Company Google-spreadsheet\nCREDS = Credentials.from_service_account_file('creds.json')\nSCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n# Open the spreadsheet\nSHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')\ndef welcome():",
+        "peekOfCode": "SCOPE = [\n    \"https://www.googleapis.com/auth/spreadsheets\",\n    \"https://www.googleapis.com/auth/drive.file\",\n    \"https://www.googleapis.com/auth/drive\"\n]\n# Authenticate the code to access the Company Google-spreadsheet\nCREDS = Credentials.from_service_account_file('creds.json')\nSCOPED_CREDS = CREDS.with_scopes(SCOPE)\nGSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)\n# Open the spreadsheet",
         "detail": "run",
         "documentation": {}
     },

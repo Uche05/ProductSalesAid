@@ -4,9 +4,13 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 # Define the scope, which is a list of google services we are accessing
-SCOPE = [ "https://www.googleapis.com/auth/spreadsheets",
-        "https://www.googleapis.com/auth/drive.file",
-        "https://www.googleapis.com/auth/drive"]
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+]
+
+
 
 # Authenticate the code to access the Company Google-spreadsheet
 CREDS = Credentials.from_service_account_file('creds.json')
@@ -15,6 +19,7 @@ GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 
 # Open the spreadsheet
 SHEET = GSPREAD_CLIENT.open('Product-Sales-Aid')
+
 
 def welcome():
     """
@@ -43,6 +48,7 @@ def get_company_data():
 
     return company
 
+
 def validate(values):
     """
     Validates the input data to ensure it contains exactly two values.
@@ -64,6 +70,7 @@ def validate(values):
         return False
     return True
 
+
 def get_email():
     """
     Obtains the email of the company from the company_name
@@ -84,6 +91,7 @@ def get_email():
         print("Your company might not receive an email of your reciept!!")
         return "No email found for the given company name"
 
+
 def get_numeric_data():
     """
     Obtains the number of products requested by the company
@@ -96,16 +104,16 @@ def get_numeric_data():
     """
     product = []
     for i in range(1, 4):
-        print(f"Please enter the number of product{i} you want")
-        
-#needs individual validation!!
-        try:
-            product_no = input(f"Please enter the number of product{i} you want: ")
-            product.append(int(product_no))
-            if not int(product_no):
-                raise ValueError
-        except ValueError as e:
-            print(f"Error: {e}, please ensure you insert a number!\n")
+        while True:
+            try:
+                product_no = input(f"Enter the number of product{i} needed: ")
+                product_no = int(product_no)
+                if product_no < 0:
+                    raise ValueError("The number cannot be negative.")
+                product.append(product_no)
+                break
+            except ValueError as e:
+                print(f"Error: {e}, please insert a valid number!\n")
 
     return product
 
@@ -124,25 +132,55 @@ def update_company_data(company, worksheet):
     print(f"{worksheet} is updating.....")
     print("Done!")
 
-def query_for_data():
-    #query for data
+
+def get_data_from_sheet():
+    """
+    Collects the data entered from the sheet
+
+    Returns:
+        A list of the most recent data entered.
+    """
+
+    print("Please enter 1 for Yes or 2 for No")
+    user_input = input("Do you want to see the data you entered? ")
+    while True:
+        try:
+            if user_input == 2:
+                pass
+            elif user_input == 1:
+                sheet = SHEET.worksheet("INFO1")
+
+                data = sheet.get_all_values()
+                needed_data = data[-1]
+                # # Print the data
+                for row in needed_data:
+                    print(row)
+                return True
+            else:
+                raise ValueError(f"{user_input} is not 1 or 2 \n")
+                return False
+
+        except ValueError as e:
+            print(f"Error: {e}, please ensure you insert a valid number!\n")
+
 
 def main():
     """
     Executes all program functions.
     """
     welcome()
+
     company_data = get_company_data()
     email = get_email()
     product_data = get_numeric_data()
     total_data = sum(product_data)
-    print("Got all necessary data....")
-    #HERE !!!
 
-    additional_data = [email] + product_data + [total_data]
-    company_data.extend(additional_data)
-    update_company_data(company_data, "INFO1")
-    print("Done!")
+    print("Got all necessary data....")
+
+    if get_data_from_sheet():
+        additional_data = [email] + product_data + [total_data]
+        company_data.extend(additional_data)
+        update_company_data(company_data, "INFO1")
 
 
 if __name__ == "__main__":
