@@ -33,7 +33,7 @@ def get_company_data():
     """
     while True:
         print("Enter the name of your company, country, separated by commas\n")
-        print("Like this: companyName,companyCountry ")
+        print("Like this: Company Name, Company Country ")
         company = input("Enter the name of the company, and country: ")
         company = company.split(",")
 
@@ -97,9 +97,10 @@ def get_numeric_data():
     product = []
     for i in range(1, 4):
         print(f"Please enter the number of product{i} you want")
-        product_no = input(f"Please enter the number of product{i} you want: ")
-
+        
+#needs individual validation!!
         try:
+            product_no = input(f"Please enter the number of product{i} you want: ")
             product.append(int(product_no))
             if not int(product_no):
                 raise ValueError
@@ -123,6 +124,8 @@ def update_company_data(company, worksheet):
     print(f"{worksheet} is updating.....")
     print("Done!")
 
+def query_for_data():
+    #query for data
 
 def main():
     """
@@ -134,6 +137,7 @@ def main():
     product_data = get_numeric_data()
     total_data = sum(product_data)
     print("Got all necessary data....")
+    #HERE !!!
 
     additional_data = [email] + product_data + [total_data]
     company_data.extend(additional_data)

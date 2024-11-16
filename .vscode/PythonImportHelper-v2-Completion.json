@@ -236,7 +236,7 @@
         "kind": 2,
         "importPath": "run",
         "description": "run",
-        "peekOfCode": "def get_company_data():\n    \"\"\"\n    Obtains the company basic data of company_name and country\n    Returns:\n        list: [company_name,country_of_company]\n    \"\"\"\n    while True:\n        print(\"Enter the name of your company, country, separated by commas\\n\")\n        print(\"Like this: companyName,companyCountry \")\n        company = input(\"Enter the name of the company, and country: \")",
+        "peekOfCode": "def get_company_data():\n    \"\"\"\n    Obtains the company basic data of company_name and country\n    Returns:\n        list: [company_name,country_of_company]\n    \"\"\"\n    while True:\n        print(\"Enter the name of your company, country, separated by commas\\n\")\n        print(\"Like this: Company Name, Company Country \")\n        company = input(\"Enter the name of the company, and country: \")",
         "detail": "run",
         "documentation": {}
     },
@@ -273,6 +273,15 @@
         "importPath": "run",
         "description": "run",
         "peekOfCode": "def update_company_data(company, worksheet):\n    \"\"\"\n    Receives a list of company details and\n    Updates the company data in spreadsheet in needed worksheet.\n    Args:\n        input -> company (list): A list containing 6 values.\n    \"\"\"\n    print(\"Updating the spreadsheet.....\")\n    sheet_to_update = SHEET.worksheet(worksheet)\n    sheet_to_update.append_row(company)",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "query_for_data",
+        "kind": 2,
+        "importPath": "run",
+        "description": "run",
+        "peekOfCode": "def query_for_data():\n    #query for data\ndef main():\n    \"\"\"\n    Executes all program functions.\n    \"\"\"\n    welcome()\n    company_data = get_company_data()\n    email = get_email()\n    product_data = get_numeric_data()",
         "detail": "run",
         "documentation": {}
     },
