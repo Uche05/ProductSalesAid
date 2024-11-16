@@ -1,8 +1,8 @@
 # [Uche's PAS](https://product-sales-aid-a1201459a834.herokuapp.com/)
 
-- A company, Uche's Product Sales Company[imaginative] uses this software to automate having a spreadsheet of the details they need from their customers when their customers want to make a purchase.
+- A company, Uche's Product Sales Company[imaginative] uses this software to automate having a spreadsheet of the details they need from their customers when their customers want to make a purchase of certain products.
 - Uche's PAS(Product Sales Aid) is a Command-Line Interface website itinerary used to register a company's details along with an amount of products they want.
-- The site takes in several user inputs and 
+
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@
 
 [User Stories](#user-stories)
 
-- [New site Users](#new-site-users)
+- [User Goals](#user-goals)
 - [Returning Site Users](#returning-site-users)
 
 
@@ -24,15 +24,14 @@
 - [Existing Features](#existing-features)
 - [Future Features](#future-features)
 
-[Testing](#testing)
+- [Testing](#testing)
+- [Features](#features)
 
 [Deployment](#deployment)
 
-- [Local Deployment](#local-deployment)
-
   - [Cloning](#cloning)
   - [Forking](#forking)
-- [Local vs Deployment](#local-vs-deployment)
+
 
 [Credits](#credits)
 
@@ -42,76 +41,85 @@
 </details>
 
 
-## User Stories
+User goals:
+Get clear instructions on how to use the system in front of them that they can refer to if needed. The ability to input their details including dates of work, days, and hours. Retrieve their employee number. Get an estimate of tax and national insurance due to be paid. Receive a copy of the information inputted via email.
 
-### New Site Users
+Site owner goals
+Provide a program that is easy to use and maintain. Present a program that gives clear instructions each time a contractor visits. Get access to the information inputted by users via email. Develop a program that can have additional features added at a later date. Add the submitted information to Google Sheets with one sheet for information before tax and the other sheet containing tax and national insurance information.
 
-- As a new site user, I would like to know what the site is about, so that I understand what the site does.
-- As a new site user, I would like to easily see instructions on how to play the quiz.
-![Screenshot](documentationimages/instructions.png)
-- As a new site user, I would like to know if certain answers I picked are actually still selected
-![Screenshot](documentationimages/interactive1.png)
-- As a new user, I want to be able to know of my incorrect answers if I have got any questions on the site wrong
-![Screenshot](documentationimages/interactive2.png)
-- As a new user (mobile reader), I want to browse through the content easily
-![Screenshot](documentationimages/pixel7res.png)
-- As a new tablet or iPad user, I want to be able to have a nice view of the site as well as navigate efficiently
-![Screenshot](documentationimages/ipadminires.png)
-- As a new user, I would want to be able to navigate back to the start if I have to or even try again and receive final feedback on the number of questions I got right overall..
-![Screenshot](documentationimages/finalfeedback.png)
+Pre development
+I wrote out notes and created a flow chart. All I had to do then is follow my notes and code one area at a time before moving on to the next. I set up projects in GitHub to write out work that needed to be done. The aim is to provide early and continuous delivery of the project.
 
-### Returning Site Users
-
-- As a returning site user, I would like to be able to access the articles via AILib easily once quiz is complete.
-![screenshot](documentationimages/finalfeedback.png)
-### Future Site Users
-
-- As a future site user, I would like to view a more analytic feedback.
-- As a future site user, i would like their to be more questions in the quiz site.
-
-## Features
-
-### Existing Features
-
-### Future Features
-
-- Write the privacy notice and terms of use statements and add them to the site.
-- Dark and light mode themes.
-- 
 
 ## Tools & Technologies Used
 
 - [Heroku](https://dashboard.heroku.com/apps) used for hosting the deployed front-end & back-end site.
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
-- [GitPod's Workspace](https://codeinstitute-ide.net/workspaces) used to manage and run the development workspace for the Product Sales Aid project seeamlessly.
+- [GitPod's Workspace](https://codeinstitute-ide.net/workspaces) used to manage and run the development workspace for the Product Sales Aid project seamlessly.
 - [PEP8 CI Linter](https://pep8ci.herokuapp.com/#) used to do checks for errors on my Python Code.
 - [Microsoft Visio](https://www.microsoft365.com/launch/Visio/?auth=2&home=1) used as flowchart making tool to make the steps the application would take.
 - [VSCode](https://code.visualstudio.com/) used for local IDE for development. It possessed extensions which helped me immensely during my making of the site.
 - [W3C HTML Validator](https://validator.w3.org/) used to do checks for errors on HTML elements of the official website.
 
+## Python Packages Used
+- ### gspread
+- ### re(Regular Expression)
+- ## google-auth
 
 
 ## Testing
+Testing
+The portal has been well tested and the results can be viewed here - TESTING
 
+## Features
+
+### Future Updates
+- The ability to actually send automated emails to the given email addresses.
+- Improve the UI of the CLI site
+- 
+
+
+Validation
+PEP8 - Python style guide checker imported - https://pypi.org/project/pep8/ All code validated and where lines were showing as too long they were adjusted. Some line adjustments caused bugs in the code and it stopped working so they were left as longer lines to avoid this issue. pycodestyle . - was used in Codeanywhere terminal to list any issues.
+
+Deployment
+
+
+Bugs
+After importing the type element so that text can be typed out a line at a time the codes for Fore.WHITE or bold kept showing up e.g. '\033[1m' for bold was typed out. To fix this I had to remove - colorama.init(autoreset=True) - which meant I had to go through each line of code to ensure if one line was red, all subsequent lines didn't turn red.
 
 ## Deployment
 
 The site was deployed to GitHub Pages. The steps to deploy are as follows:
 
-- In the [GitHub repository](https://github.com/Uche05/ci-p2-Uche's PAS(Product Sales Aid)), navigate to the Settings tab.
-- From the source section drop-down menu, select the **Main** Branch, then click "Save".
-- The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+### Heroku
+The Application has been deployed from GitHub to Heroku by following the steps:
 
-The live link can be found [here](https://uche05.github.io/ci-p2-Uche's PAS(Product Sales Aid)/).
+- Create or log in to your account at heroku.com
+- Create a new app, add a unique app name ( for example corri-construction-p3) and then choose your region
+- Click on create app
+- Go to "Settings"
+- Under Config Vars add the private API key information using key 'CRED' and into the value area copy the API key information added to the .json file. Also add a key 'PORT' and value '8000'.
+- Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom
+- Go to "Deploy" and select "GitHub" in "Deployment method"
+- To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below.
+- Choose the branch you want to build your app from
+- If preferred, click on "Enable Automatic Deploys", which keeps the app up to date with your GitHub repository
+- Wait for the app to build. Once ready you will see the “App was successfully deployed” message and a 'View' button to take you to your deployed link.
+- Branching the GitHub Repository using GitHub Desktop and Visual Studio Code
+- Go to the GitHub repository.
+- Click on the branch button in the left hand side under the repository name.
+- Give your branch a name.
+- Go to the CODE area on the right and select "Open with GitHub Desktop".
+- You will be asked if you want to clone the repository - say yes.
+- GitHub desktop will suggest what to do next - select Open code using Visual Studio Code.
+- The deployed project live link is HERE - Use Ctrl (Cmd) and click to open in a new window.
 
-### Local Deployment
-
-This project can be cloned or forked in order to make a local copy on your own system.
 
 #### Cloning
 
-You can clone the repository by following these steps:
+- You can clone the repository by following these steps:
 
 1. Go to the [GitHub repository](https://github.com/Uche05/ci-p2-Uche's PAS(Product Sales Aid)).
 2. Locate the Code button above the list of files and click it.
@@ -133,9 +141,6 @@ You can fork this repository by using the following steps:
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account.
 
-### Local vs Deployment
-
-There are no notable differences between my local developed site and the GitHub pages deployed site.
 
 ## Credits
 
@@ -149,19 +154,10 @@ The following are credits to various people and technologies that have directly 
 |[Markdown Used](https://github.com/boderg/your-weather)|Markdown| Markdown template was from the given [github repo](https://github.com/boderg/your-weather) for the both "README" and "TESTING"|
 |[Code snippets](https://github.com/Uche05/ci-p2-Uche's PAS(Product Sales Aid))|Javascript Code Snippets for loading and using enter key | Javascript code use of loading and use of enter key was inspired from  [Love Math Project](https://github.com/Uche05/love-maths-uche05) taught officially by Code Institute.|
 
-### Media
-
-| Name of media | Location | Type | Notes |
-| --- | --- | --- | --- |
-|[Favicon](assets/images/favicon.svg)| Favicon | SVG | I made the given SVG Favicon with knowledge on how to from W3Schools and ChatGPT|
-|[Microsoft Powerpoint](https://www.microsoft365.com/launch/PowerPoint/?auth=2&home=1)|Home page|image| Personally constructed image as wireframe for the quiz app |
-|[Favicon used](assets/images/robot.svg)| Favicon and Title | Favicon | With the knowledge I gained from W3schools and ChatGPT, I made the given svg file and used it as my favicon|
-|[Icons Used](https://fontawesome.com/search?o=r&m=free)| Feedback after quiz is finished | Icons | I used Font Awesome to obtain the icons used for the feedback after quiz is finished |
-| [Feedback Image](https://th.bing.com/th/id/R.7acd2ea060b66321b4fede1bbff805c0?rik=%2fLWFH5zOVsecYw&riu=http%3a%2f%2fwww.clker.com%2fcliparts%2fX%2fR%2fM%2fR%2f6%2fy%2fdark-green-cross-mark-md.png&ehk=ErsbA23GrSaH9fP6mvaWMUBtjCNPaHgXMrYjV%2fKzpnU%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1)| Feedback after user answers a question | Image/PNG | Used this image to support feedback given to user after answering a question |
 
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor, [Chris Quinn](https://github.com/10xOXR) for his support throughout the development of this project and hopes he enjoys his vacation time.
+- I would like to thank my Code Institute mentor, [Jubril Akolade](https://github.com/10xOXR) for his support throughout the development of this project and hopes he enjoys his vacation time.
 - I would like to thank [Code Institute](https://codeinstitute.net) for giving me the opportunity to complete the P2 course.
 - I would like to thank the [Code Institute](https://codeinstitute.net) facilitator team, [Iris Smok](https://github.com/Iris-Smok/Iris-Smok), [the Code Institute Student Care Team](studentcare@codeinstitute.net) and [Irene Neville](
 irene.neville@codeinstitute.net) for their advice.
