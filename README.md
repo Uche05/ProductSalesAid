@@ -161,9 +161,9 @@ The following are credits to various people and technologies that have directly 
 
 | Source | Location | Notes |
 | --- | --- | --- |
-|[re](Regular Expression)| Python Package used to match the email expression |The re(Regular Expression was used to match the expression of an email to check if it followed the format of {wordWITHnumberwithsymbols}{@}{wordWITHnumberWITHsymbols}{.}{wordONLYthat have more than2Chars}) |
+|***re***(Regular Expression)| Python Package used to match the email expression |The re(Regular Expression was used to match the expression of an email to check if it followed the format of {wordWITHnumberwithsymbols}{@}{wordWITHnumberWITHsymbols}{.}{wordONLYthat have more than2Chars}) |
 |[Markdown Used](https://github.com/boderg/your-weather)|Markdown| Markdown template was from the given [github repo](https://github.com/boderg/your-weather) for the both "README" and "TESTING" from [here](https://github.com/todiane/corri-construction-p3?tab=readme-ov-file)|
-|[Code snippets](https://github.com/Uche05/ProductSalesAid)|Certain Python Code Snippets for importing and use of gspread and google-auth |Python code in use of gspread and google-auth came from [LoveSandwiches Project](https://github.com/Uche05/love-sandwiches) taught officially by Code Institute.|
+|[Code snippets](https://github.com/Uche05/ProductSalesAid)|Certain Python Code Snippets for importing and use of gspread and google-auth and use of exception handlers|Python code in use of gspread and google-auth came from [LoveSandwiches Project](https://github.com/Uche05/love-sandwiches) taught officially by Code Institute.|
 
 
 ### Acknowledgements
