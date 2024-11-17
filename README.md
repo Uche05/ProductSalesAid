@@ -37,6 +37,7 @@
 ## Mockup-screenshots
 
 <img src="documentation/screenshotofsite.png">
+<img src = "documentation/siteshot2.png" alt= "">
 
 ### User goals:
 
@@ -47,6 +48,7 @@ Receive a copy of the information inputted via email(Future Plan).
 
 Provide a program that is easy w progression use and maintain. Present a program that gives clear instructions each time a client visits. Develop a program that can have updated features added at a later time. Add the submitted information w progression Google Sheets with one sheet for information.
 `<img src= "documentation/sheetshot.png" alt = "sheets">`
+
 
 ### Pre-development
 
