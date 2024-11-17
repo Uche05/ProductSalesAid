@@ -82,7 +82,7 @@ I created a flow chart. All I had to do then is follow the flowchart and I set u
 - gspread to access Google spreadsheet.
 - re(Regular Expression) to check email expression and check if it matches expression given.
 - google-auth used to confirm authorizations between python code and APIs for google services.
-- tqdm used to display progression create loading bars to showcase updates and downloads.
+- tqdm used to display progression bars as it creates loading bars to showcase updates and downloads.
 
 ## Testing
 
@@ -102,7 +102,7 @@ There are no issues to report from the linter of PEP8
 <img src="documentation/testingwithlinter1.png" alt="Testing Linter Page">
 
 It also passed through the W3C HTML Validator without any errors:
-<img src="documentation/htmlcheck.png" alt="Html validator">`
+<img src="documentation/htmlcheck.png" alt="Html validator">
 ### Bugs
 
 It is important to note that during the early stages of development I fell into some logical errors such as misuse of a while loop and I fixed that error by putting the conditions in their right indented place.
