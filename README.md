@@ -73,6 +73,7 @@ I created a flow chart. All I had to do then is follow the flowchart and I set u
 - [PEP8 CI Linter](https://pep8ci.herokuapp.com/#) used to do checks for errors on my Python Code.
 - [Microsoft Visio](https://www.microsoft365.com/launch/Visio/?auth=2&home=1) used as flowchart making tool to make the steps the application would take.
 - [VSCode](https://code.visualstudio.com/) used for local IDE for development. It possessed extensions which helped me immensely during my making of the site.
+- [MS Copilot]() was used to help me understand the errors brought out in the PEP8 Linter from CI and I used it as a tool to help me better understand the meaning of those errors and how to face them such as the E128 continuation line under-indented for visual indent.
 - [W3C HTML Validator](https://validator.w3.org/) used to do checks for errors on HTML elements of the official website.
 
 ## Python Libraries and Packages Used
@@ -91,7 +92,7 @@ The portal has been well tested and the results can be viewed here.
 
 ### Validation
 PEP8 - Python style guide checker imported - https://pypi.org/project/pep8/ 
-All code validated and where lines were showing as too long they were adjust which was fixed by adjusting code to where they nee to be.
+All code validated and where lines were showing as too long they were adjust which was fixed by adjusting code to where they need to be.
 There are no issues to report from the linter of PEP8
 <img src="documentation/testingwithlinter1.png" alt="Testing Linter Page">
 
@@ -99,7 +100,11 @@ It also passed through the W3C HTML Validator without any errors:
 <img src="documentation/htmlcheck.png" alt="Html validator">
 
 ### Bugs
-No  issues to report.
+It is important to note that during the early stages of development I fell into some logical errors such as misuse of a while loop and I fixed that error by putting the conditions in their right indented place.
+Before there were no issues, PEP8 Linter hinted about lines that were too long and space characters it detected; I fixed the errors by noting where it detected spaces and removed such spaces.
+Another error the linter formally wrote was the "continuation line under-indented for visual indent" which I fixed using Microsoft Copilot; the same thing occured with the E302 Error of expected 2 blank lines, found(1).
+
+With the current code there are ***NO*** issues to report.
 
 ## Deployment
 
@@ -164,6 +169,7 @@ The following are credits to various people and technologies that have directly 
 | --- | --- | --- |
 |***re***(Regular Expression)| Python Package used to match the email expression |The re(Regular Expression was used to match the expression of an email to check if it followed the format of {wordWITHnumberwithsymbols}{@}{wordWITHnumberWITHsymbols}{.}{wordONLYthat have more than2Chars}) |
 |[Markdown Used](https://github.com/boderg/your-weather)|Markdown| Markdown template was from the given [github repo](https://github.com/boderg/your-weather) for the both "README" and "TESTING" from [here](https://github.com/todiane/corri-construction-p3?tab=readme-ov-file)|
+|[Code snippets](https://github.com/Uche05/ProductSalesAid)|Certain Python Code Snippets for importing and use of gspread and google-auth and use of exception handlers|Python code in use of gspread and google-auth came from [LoveSandwiches Project](https://github.com/Uche05/love-sandwiches) taught officially by Code Institute.|
 |[Code snippets](https://github.com/Uche05/ProductSalesAid)|Certain Python Code Snippets for importing and use of gspread and google-auth and use of exception handlers|Python code in use of gspread and google-auth came from [LoveSandwiches Project](https://github.com/Uche05/love-sandwiches) taught officially by Code Institute.|
 
 
