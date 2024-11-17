@@ -85,7 +85,8 @@ I created a flow chart. All I had to do then is follow the flowchart and I set u
 The portal has been well tested and the results can be viewed here.
 
 ### Future Updates
-- The ability to actually send automated emails to the given email addresses.
+- The ability to actually send automated emails of receipts to the given email addresses.
+- The ability to let users give the name of the product needed from us
 - Improve the UI of the CLI site
 
 ### Validation
