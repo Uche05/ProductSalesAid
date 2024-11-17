@@ -40,19 +40,29 @@
 </details>
 
 ## Mockup-screenshots
-[]()
+<img src="documentation/screenshotofsite.png">
 
 ### User goals:
-Get clear instructions on how to use the system in front of them that they can refer to if needed. The ability to input their details including dates of work, days, and hours. Retrieve their employee number. Get an estimate of tax and national insurance due to be paid. Receive a copy of the information inputted via email.
-<embed src="documentation/flowchartPSA.pdf" type="application/pdf" width="100%" height="600px" />
-
+Get clear instructions on how to use the system in front of them that they can refer to if needed. The ability to input their details including company name, county, email(optional), and some product numbers. Get a sum of the numeric data. Ability to retrieve the sent data.
+Receive a copy of the information inputted via email(Future Plan).
 
 ### Site-owner-goals
-Provide a program that is easy to use and maintain. Present a program that gives clear instructions each time a contractor visits. Get access to the information inputted by users via email. Develop a program that can have additional features added at a later date. Add the submitted information to Google Sheets with one sheet for information before tax and the other sheet containing tax and national insurance information.
+
+Provide a program that is easy to use and maintain. Present a program that gives clear instructions each time a contractor visits. Develop a program that can have additional features added at a later date. Add the submitted information to Google Sheets with one sheet for information.
+<img src= "documentation/sheetshot.png" alt = "sheets">
 
 ### Pre-development
-I wrote out notes and created a flow chart. All I had to do then is follow my notes and code one area at a time before moving on to the next. I set up projects in GitHub to write out work that needed to be done. The aim is to provide early and continuous delivery of the project.
+I created a flow chart. All I had to do then is follow the flowchart and I set up projects in GitHub to write out work that needed to be done. The aim is to provide early and continuous delivery of the project.
 
+<object data="documentation/flowchartPSA.pdf" type="application/pdf" width="100%" height="600px"></object>
+<p>Your browser doesn't support pdfs. <a href="documentation/flowchartPSA.pdf">Get it here! To see the flowchart</a>
+</p>
+
+- Here are simple screenshots of the flowchart
+<img src="documentation/flowshot1.png" alt = "flowchart">
+<img src="documentation/flowshot2.png" alt = "flowchart">
+<img src="documentation/flowshot3.png" alt = "flowchart">
+<img src="documentation/flowshot4.png" alt = "flowchart">
 
 ## Tools & Technologies Used
 
@@ -72,7 +82,6 @@ I wrote out notes and created a flow chart. All I had to do then is follow my no
 
 
 ## Testing
-Testing
 The portal has been well tested and the results can be viewed here.
 
 ### Future Updates
@@ -81,7 +90,8 @@ The portal has been well tested and the results can be viewed here.
 
 ### Validation
 PEP8 - Python style guide checker imported - https://pypi.org/project/pep8/ 
-All code validated and where lines were showing as too long they were adjust. There are no issues to report from the linter of PEP8
+All code validated and where lines were showing as too long they were adjust which was fixed by adjusting code to where they nee to be.
+There are no issues to report from the linter of PEP8
 <img src="documentation/testingwithlinter1.png" alt="Testing Linter Page">
 
 ### Bugs
@@ -95,7 +105,7 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 The Application has been deployed from GitHub to Heroku by following the steps:
 
 - Create or log in to your account at heroku.com
-- Create a new app, add a unique app name ( for example corri-construction-p3) and then choose your region
+- Create a new app, add a unique app name and then choose your region from Europe or America.
 - Click on create app
 - Go to "Settings"
 - Under Config Vars add the private API key information using key 'CRED' and into the value area copy the API key information added to the .json file. - Also add a key 'PORT' and value '8000'.
@@ -119,13 +129,13 @@ The Application has been deployed from GitHub to Heroku by following the steps:
 
 - You can clone the repository by following these steps:
 
-1. Go to the [GitHub repository](https://github.com/Uche05/ci-p2-Uche's PAS(Product Sales Aid)).
+1. Go to the [GitHub repository](https://github.com/Uche05/ProductSalesAid).
 2. Locate the Code button above the list of files and click it.
 3. Select if you prefer to clone using HTTPS, SSH, or GitHub CLI and click the copy button to copy the URL to your clipboard.
 4. Open Git Bash or Terminal.
 5. Change the current working directory to the one where you want the cloned directory.
 6. In your IDE Terminal, type the following command to clone my repository:
-   - `git clone https://github.com/Uche05/ci-p2-Uche's PAS(Product Sales Aid).git`
+   - `git clone https://github.com/Uche05/ProductSalesAid.git`
 7. Press Enter to create your local clone.
 
 For Gitpod users, this was implemented on gitpod, it was from gitpod to an SSH Connection on my local PC directly to Github via git and some useful VSCode extensions.
