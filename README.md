@@ -75,7 +75,7 @@ I created a flow chart. All I had to do then is follow the flowchart and I set u
 - [VSCode](https://code.visualstudio.com/) used for local IDE for development. It possessed extensions which helped me immensely during my making of the site.
 - [W3C HTML Validator](https://validator.w3.org/) used to do checks for errors on HTML elements of the official website.
 
-## Python Packages Used
+## Python Libraries and Packages Used
 - gspread to access Google spreadsheet.
 - re(Regular Expression) to check email expression and check if it matches expression given.
 - google-auth used to confirm authorizations between python code and APIs for google services.
