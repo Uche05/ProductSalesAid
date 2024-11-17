@@ -101,8 +101,10 @@ It also passed through the W3C HTML Validator without any errors:
 
 ### Bugs
 It is important to note that during the early stages of development I fell into some logical errors such as misuse of a while loop and I fixed that error by putting the conditions in their right indented place.
+
 Before there were no issues, PEP8 Linter hinted about lines that were too long and space characters it detected; I fixed the errors by noting where it detected spaces and removed such spaces.
-Another error the linter formally wrote was the "continuation line under-indented for visual indent" which I fixed using Microsoft Copilot; the same thing occured with the E302 Error of expected 2 blank lines, found(1).
+
+Another error the linter formally wrote was the "continuation line under-indented for visual indent" which I fixed using help from using Microsoft Copilot to understand the meaning of the error as I couldn't get it by intuition and hence use the gained guidance of MS. Copilot to fix the issue; the same thing occured with the E302 Error of expected 2 blank lines, found(1) as I didn't know it meant the lines before a function but Ms.Copilot pointed that out.
 
 With the current code there are ***NO*** issues to report.
 
