@@ -1,6 +1,7 @@
 import re
 
 import gspread
+import tqdm  # tqdm is an external python module like gspread and google-auth
 from google.oauth2.service_account import Credentials
 
 # Define the scope, which is a list of google services we are accessing
@@ -128,7 +129,11 @@ def update_company_data(company, worksheet):
     """
     print("Updating the spreadsheet.....")
     sheet_to_update = SHEET.worksheet(worksheet)
-    sheet_to_update.append_row(company)
+    
+    # Use tqdm to show progress
+    for t in tqdm.tqdm(range(5), desc="Updating"):
+        sheet_to_update.append_row(company)
+    
     print(f"{worksheet} is updating.....")
 
 
