@@ -129,11 +129,11 @@ def update_company_data(company, worksheet):
     """
     print("Updating the spreadsheet.....")
     sheet_to_update = SHEET.worksheet(worksheet)
-    
+
     # Use tqdm to show progress
     for t in tqdm.tqdm(range(5), desc="Updating"):
         sheet_to_update.append_row(company)
-    
+
     print(f"{worksheet} is updating.....")
 
 
