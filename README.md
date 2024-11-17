@@ -98,11 +98,10 @@ The portal has been well tested and the results can be viewed here.
 PEP8 - Python style guide checker imported - https://pypi.org/project/pep8/
 All code validated and where lines were showing as too long they were adjust which was fixed by adjusting code to where they need to be.
 There are no issues to report from the linter of PEP8
-`<img src="documentation/testingwithlinter1.png" alt="Testing Linter Page">`
+<img src="documentation/testingwithlinter1.png" alt="Testing Linter Page">
 
 It also passed through the W3C HTML Validator without any errors:
-`<img src="documentation/htmlcheck.png" alt="Html validator">`
-
+<img src="documentation/htmlcheck.png" alt="Html validator">`
 ### Bugs
 
 It is important to note that during the early stages of development I fell into some logical errors such as misuse of a while loop and I fixed that error by putting the conditions in their right indented place.
