@@ -130,7 +130,6 @@ def update_company_data(company, worksheet):
     sheet_to_update = SHEET.worksheet(worksheet)
     sheet_to_update.append_row(company)
     print(f"{worksheet} is updating.....")
-    
 
 
 def get_data_from_sheet():
@@ -163,8 +162,6 @@ def get_data_from_sheet():
             print(f"Error: {e}, please ensure you insert a valid number!\n")
 
 
-
-
 def main():
     """
     Executes all program functions.
@@ -172,7 +169,6 @@ def main():
     welcome()
 
     company_data = get_company_data()
-    
     if validate(company_data):
         email = get_email()
         product_data = get_numeric_data()
@@ -184,8 +180,9 @@ def main():
     company_data.extend(additional_data)
     update_company_data(company_data, "INFO1")
     get_data_from_sheet()
-    
+
     print("Done!")
+
 
 # learnt from earlier use of python
 if __name__ == "__main__":
