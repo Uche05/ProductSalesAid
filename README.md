@@ -59,10 +59,10 @@ I created a flow chart. All I had to do then is follow the flowchart and I set u
 </p>
 
 - Here are simple screenshots of the flowchart
-  `<img src="documentation/flowshot1.png" alt = "flowchart">`
-  `<img src="documentation/flowshot2.png" alt = "flowchart">`
-  `<img src="documentation/flowshot3.png" alt = "flowchart">`
-  `<img src="documentation/flowshot4.png" alt = "flowchart">`
+  <img src="documentation/flowshot1.png" alt = "flowchart">
+  <img src="documentation/flowshot2.png" alt = "flowchart">
+  <img src="documentation/flowshot3.png" alt = "flowchart">
+  <img src="documentation/flowshot4.png" alt = "flowchart">
 
 ## Tools & Technologies Used
 
