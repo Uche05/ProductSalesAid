@@ -150,19 +150,18 @@ The following are credits to various people and technologies that have directly 
 
 | Source | Location | Notes |
 | --- | --- | --- |
-|[Javascript Code-Check Aid- ChatGPT](https://chatgpt.com/)| Tool to check javascript code as i wrote it | The JavaScript code I wrote was often quite messy, so I used ChatGPT to help correct and update it. Through this process, I learned how to use arrow functions (=>), the forEach function, and discovered the flexibility JavaScript offers, such as storing objects in arrays— something Python doesn’t do as easily. Thanks to ChatGPT’s guidance, my final JavaScript code was error-free. |
-|[Markdown Used](https://github.com/boderg/your-weather)|Markdown| Markdown template was from the given [github repo](https://github.com/boderg/your-weather) for the both "README" and "TESTING"|
-|[Code snippets](https://github.com/Uche05/ci-p2-Uche's PAS(Product Sales Aid))|Javascript Code Snippets for loading and using enter key | Javascript code use of loading and use of enter key was inspired from  [Love Math Project](https://github.com/Uche05/love-maths-uche05) taught officially by Code Institute.|
+|[re](Regular Expression)| Python Package used to match the email expression |The re(Regular Expression was used to match the expression of an email to check if it followed the format of {wordWITHnumberwithsymbols}{@}{wordWITHnumberWITHsymbols}{.}{wordONLYthat have more than2Chars}) |
+|[Markdown Used](https://github.com/boderg/your-weather)|Markdown| Markdown template was from the given [github repo](https://github.com/boderg/your-weather) for the both "README" and "TESTING" from https://github.com/todiane/corri-construction-p3?tab=readme-ov-file|
+|[Code snippets](https://github.com/Uche05/ProductSalesAid)|Certain Python Code Snippets for importing and use of gspread and google-auth |Python code in use of gspread and google-auth came from [LoveSandwiches Project](https://github.com/Uche05/love-sandwiches) taught officially by Code Institute.|
 
 
 ### Acknowledgements
 
-- I would like to thank my Code Institute mentor, [Jubril Akolade](https://github.com/10xOXR) for his support throughout the development of this project and hopes he enjoys his vacation time.
-- I would like to thank [Code Institute](https://codeinstitute.net) for giving me the opportunity to complete the P2 course.
+- I would like to thank my Code Institute mentor, [Jubril Akolade](https://github.com/Jubrillionaire) for his support throughout the development of this project.
+- I would like to thank [Code Institute](https://codeinstitute.net) for giving me the opportunity to complete the P3 course.
 - I would like to thank the [Code Institute](https://codeinstitute.net) facilitator team, [Iris Smok](https://github.com/Iris-Smok/Iris-Smok), [the Code Institute Student Care Team](studentcare@codeinstitute.net) and [Irene Neville](
 irene.neville@codeinstitute.net) for their advice.
-- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) and [new friend, Darragh_Drennan](https://code-institute-room.slack.com) for the moral support and general information that helps with my studies with Code Institute.
-- I would like to appreciate the [W3schools website](https://www.w3schools.com/) and [OpenAI's ChatGPT](https://chatgpt.com/) for their free websites and resources that educate on many technological  and coding concepts intuitively and enabled me understand and learn how to craft needed stuff for my website.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support and general information that helps with my studies with Code Institute.
 - I would like to thank my family, for their support and understanding, for believing in me, and allowing me to make this transition into software development.
-- I personally enjoyed performing this project as it was a chance to both construct and actually program using coding programming techniques and paradigms; to make a functional content myself through research and personal study.
+- I personally enjoyed performing this project as it was a chance to both construct and actually program using coding programming techniques and paradigms; to make a functional content myself.
 - Written and edited by Uchechukwu Christian Kpadeuwa
