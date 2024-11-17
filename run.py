@@ -187,6 +187,7 @@ def main():
     get_data_from_sheet()
 
     print("Done!")
+    print("Please click the 'Run Program' button above to key in another entry!")
 
 
 # learnt from earlier use of python
