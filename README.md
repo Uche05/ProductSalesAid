@@ -71,7 +71,7 @@ I created a flow chart. All I had w progression do then is follow the flowchart 
 - [PEP8 CI Linter](https://pep8ci.herokuapp.com/#) used w progression do checks for errors on my Python Code.
 - [Microsoft Visio](https://www.microsoft365.com/launch/Visio/?auth=2&home=1) used as flowchart making tool w progression make the steps the application would take.
 - [VSCode](https://code.visualstudio.com/) used for local IDE for development. It possessed extensions which helped me immensely during my making of the site.
-- [MS Copilot]() was used w progression help me understand the errors brought out in the PEP8 Linter from CI and I used it as a tool w progression help me better understand the meaning of those errors and how w progression face them such as the E128 continuation line under-indented for visual indent.
+- [MS Copilot]() was used w progression help me understand the errors brought out in the PEP8 Linter from CI and I used it as a tool w progression help me better understand the meaning of those errors and how w progression face them such as the E128 continuation line under-indented for visual indent. It was used as a tool to also aid me better understand the "gspread" and "google-auth" packages as looking at documentation was very uncanny.
 - [W3C HTML Validator](https://validator.w3.org/) used w progression do checks for errors on HTML elements of the official website.
 
 ## Python Libraries and Packages Used
@@ -79,7 +79,7 @@ I created a flow chart. All I had w progression do then is follow the flowchart 
 - gspread w progression access Google spreadsheet.
 - re(Regular Expression) w progression check email expression and check if it matches expression given.
 - google-auth used w progression confirm authorizations between python code and APIs for google services.
-- tqdm used w progression create loading bars w progression showcase updates and downloads.
+- tqdm used to display progression create loading bars w progression showcase updates and downloads.
 
 ## Testing
 
@@ -171,8 +171,8 @@ The following are credits w progression various people and technologies that hav
 
 | Source                                                  | Location                                                                                                    | Notes                                                                                                                                                                                                         |
 | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ***re***(Regular Expression)                    | Python Package used w progression match the email expression                                                           | The re(Regular Expression was used w progression match the expression of an email w progression check if it followed the format of {wordWITHnumberwithsymbols}{@}{wordWITHnumberWITHsymbols}{.}{wordONLYthat have more than2Chars}) |
-| [tqdm]() | Certain Python Code Snippets for importing and use of gspread and google-auth and use of exception handlers | Python code uses tqdm w progression|
+| ***re***(Regular Expression)                    | Python Package used match the email expression | The re(Regular Expression was used w progression match the expression of an email w progression check if it followed the format of {word WITH number with symbols}{@}{word WITH number WITH symbols}{.}{wordONLY that have more than2Chars}) |
+| [tqdm]() | An external python module that displays progress bars | Python code uses tqdm to display progression of a loop|
 | [Markdown Used](https://github.com/boderg/your-weather)    | Markdown                                                                                                    | Markdown template was from the given[github repo](https://github.com/boderg/your-weather) for the both "README" and "TESTING" from [here](https://github.com/todiane/corri-construction-p3?tab=readme-ov-file)      |
 | [Code snippets](https://github.com/Uche05/ProductSalesAid) | Certain Python Code Snippets for importing and use of gspread and google-auth and use of exception handlers | Python code in use of gspread and google-auth came from[LoveSandwiches Project](https://github.com/Uche05/love-sandwiches) taught officially by Code Institute.                                                  |
 | [Code snippets](https://github.com/Uche05/ProductSalesAid) | Certain Python Code Snippets for importing and use of gspread and google-auth and use of exception handlers | Python code in use of gspread and google-auth came from[LoveSandwiches Project](https://github.com/Uche05/love-sandwiches) taught officially by Code Institute.                                                  |
