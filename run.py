@@ -153,7 +153,7 @@ def get_data_from_sheet():
             elif user_input == 1:
                 sheet = SHEET.worksheet("INFO1")
                 datas = []
-                # Print the data and use tqdm while retrival
+                # Print the data and use tqdm while retrieval
                 for item in tqdm(range(1, 7), desc="Retrieving data..."):
                     needed_data = sheet.col_values(item)
                     datas.append(needed_data[-1])
