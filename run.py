@@ -42,7 +42,7 @@ def get_company_data():
         company = company.split(",")
 
         if validate(company):
-            print("Data is valid")
+            print("Data is valid\n")
             break
 
     return company
