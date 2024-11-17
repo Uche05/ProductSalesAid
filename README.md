@@ -76,9 +76,9 @@ I created a flow chart. All I had to do then is follow the flowchart and I set u
 - [W3C HTML Validator](https://validator.w3.org/) used to do checks for errors on HTML elements of the official website.
 
 ## Python Packages Used
-- gspread
-- re(Regular Expression)
-- google-auth
+- gspread to access Google spreadsheet.
+- re(Regular Expression) to check email expression and check if it matches expression given.
+- google-auth used to confirm authorizations between python code and APIs for google services.
 
 
 ## Testing
