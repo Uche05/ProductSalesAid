@@ -70,6 +70,7 @@ I created a flow chart. All I had to do then is follow the flowchart and I set u
 - [Git](https://git-scm.com) used for version control. (`git add`, `git commit`, `git push`)
 - [GitHub](https://github.com) used for secure online code storage.
 - [GitPod&#39;s Workspace](https://codeinstitute-ide.net/workspaces) used to manage and run the development workspace for the Product Sales Aid project seamlessly.
+- [Google Sheets](https://docs.google.com/spreadsheets/d/1QKMGuemIVcsDW5-9jmrrAfPrRtCDpV8x_o3t4_soqMk/edit?gid=0#gid=0) used to store user inputted data and will be the sheet the Uche Company uses to view their customer orders.
 - [PEP8 CI Linter](https://pep8ci.herokuapp.com/#) used to do checks for errors on my Python Code.
 - [Microsoft Visio](https://www.microsoft365.com/launch/Visio/?auth=2&home=1) used as flowchart making tool to make the steps the application would take.
 - [VSCode](https://code.visualstudio.com/) used for local IDE for development. It possessed extensions which helped me immensely during my making of the site.
