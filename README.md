@@ -94,6 +94,9 @@ All code validated and where lines were showing as too long they were adjust whi
 There are no issues to report from the linter of PEP8
 <img src="documentation/testingwithlinter1.png" alt="Testing Linter Page">
 
+It also passed through the W3C HTML Validator without any errors:
+<img src="documentation/htmlcheck.png" alt="Html validator">
+
 ### Bugs
 No  issues to report.
 
