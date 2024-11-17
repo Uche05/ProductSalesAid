@@ -168,9 +168,11 @@ def main():
     welcome()
 
     company_data = get_company_data()
-    email = get_email()
-    product_data = get_numeric_data()
-    total_data = sum(product_data)
+    
+    if validate(company_data):
+        email = get_email()
+        product_data = get_numeric_data()
+        total_data = sum(product_data)
 
     print("Got all necessary data....")
 
