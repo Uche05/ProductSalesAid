@@ -70,6 +70,7 @@ def validate(values):
     return True
 
 
+#code using re module
 def get_email():
     """
     Obtains the email of the company from the company_name
