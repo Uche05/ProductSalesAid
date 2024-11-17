@@ -80,20 +80,19 @@
         "documentation": {}
     },
     {
-        "label": "tqdm",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "tqdm",
-        "description": "tqdm",
-        "detail": "tqdm",
-        "documentation": {}
-    },
-    {
         "label": "Credentials",
         "importPath": "google.oauth2.service_account",
         "description": "google.oauth2.service_account",
         "isExtraImport": true,
         "detail": "google.oauth2.service_account",
+        "documentation": {}
+    },
+    {
+        "label": "tqdm",
+        "importPath": "tqdm",
+        "description": "tqdm",
+        "isExtraImport": true,
+        "detail": "tqdm",
         "documentation": {}
     },
     {
