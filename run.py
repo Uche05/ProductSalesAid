@@ -181,6 +181,6 @@ def main():
         company_data.extend(additional_data)
         update_company_data(company_data, "INFO1")
 
-
+# learnt from earlier use of python
 if __name__ == "__main__":
     main()
