@@ -130,7 +130,7 @@ def update_company_data(company, worksheet):
     sheet_to_update = SHEET.worksheet(worksheet)
     sheet_to_update.append_row(company)
     print(f"{worksheet} is updating.....")
-    print("Done!")
+    
 
 
 def get_data_from_sheet():
@@ -140,7 +140,6 @@ def get_data_from_sheet():
     Returns:
         A list of the most recent data entered.
     """
-
     while True:
         try:
             print("Please enter 1 for Yes or 2 for No")
@@ -149,16 +148,21 @@ def get_data_from_sheet():
                 return True
             elif user_input == 1:
                 sheet = SHEET.worksheet("INFO1")
-                data = sheet.get_all_values()
-                needed_data = data[-1]
+                datas = []
                 # Print the data
-                for item in needed_data:
-                    print(item)
-                return needed_data, True
+                for item in range(1, 7):
+                    needed_data = sheet.col_values(item)
+                    datas.append(needed_data[-1])
+                print("Here is the data you entered:")
+                for data in datas:
+                    print(data)
+                return datas, True
             else:
                 raise ValueError(f"{user_input} is not 1 or 2 \n")
         except ValueError as e:
             print(f"Error: {e}, please ensure you insert a valid number!\n")
+
+
 
 
 def main():
@@ -176,10 +180,12 @@ def main():
 
     print("Got all necessary data....")
 
-    if get_data_from_sheet():
-        additional_data = [email] + product_data + [total_data]
-        company_data.extend(additional_data)
-        update_company_data(company_data, "INFO1")
+    additional_data = [email] + product_data + [total_data]
+    company_data.extend(additional_data)
+    update_company_data(company_data, "INFO1")
+    get_data_from_sheet()
+    
+    print("Done!")
 
 # learnt from earlier use of python
 if __name__ == "__main__":
