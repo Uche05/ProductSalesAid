@@ -12,22 +12,21 @@
 [Mock-up Screenshots](#mockup-screenshots)
 
 
-[User Stories](#user-stories)
+[User goals](#user-goals)
 
-- [User Goals](#user-goals)
-- [Returning Site Users](#returning-site-users)
-
+- [Pre-development](#pre-development)
 
 
-[Features](#features)
 
-- [Existing Features](#existing-features)
-- [Future Features](#future-features)
 
-- [Testing](#testing)
-- [Features](#features)
+[Testing](#testing)
+
+- [Future Updates](#future-updates)
+- [Validation](#validation)
+- [Deployment](#deployment)
 
 [Deployment](#deployment)
+- [Heroku](#heroku)
 
   - [Cloning](#cloning)
   - [Forking](#forking)
@@ -40,14 +39,18 @@
 
 </details>
 
+## Mockup-screenshots
+[]()
 
-User goals:
+### User goals:
 Get clear instructions on how to use the system in front of them that they can refer to if needed. The ability to input their details including dates of work, days, and hours. Retrieve their employee number. Get an estimate of tax and national insurance due to be paid. Receive a copy of the information inputted via email.
+<embed src="documentation/flowchartPSA.pdf" type="application/pdf" width="100%" height="600px" />
 
-Site owner goals
+
+### Site-owner-goals
 Provide a program that is easy to use and maintain. Present a program that gives clear instructions each time a contractor visits. Get access to the information inputted by users via email. Develop a program that can have additional features added at a later date. Add the submitted information to Google Sheets with one sheet for information before tax and the other sheet containing tax and national insurance information.
 
-Pre development
+### Pre-development
 I wrote out notes and created a flow chart. All I had to do then is follow my notes and code one area at a time before moving on to the next. I set up projects in GitHub to write out work that needed to be done. The aim is to provide early and continuous delivery of the project.
 
 
@@ -63,35 +66,30 @@ I wrote out notes and created a flow chart. All I had to do then is follow my no
 - [W3C HTML Validator](https://validator.w3.org/) used to do checks for errors on HTML elements of the official website.
 
 ## Python Packages Used
-- ### gspread
-- ### re(Regular Expression)
-- ## google-auth
+- gspread
+- re(Regular Expression)
+- google-auth
 
 
 ## Testing
 Testing
-The portal has been well tested and the results can be viewed here - TESTING
-
-## Features
+The portal has been well tested and the results can be viewed here.
 
 ### Future Updates
 - The ability to actually send automated emails to the given email addresses.
 - Improve the UI of the CLI site
-- 
 
+### Validation
+PEP8 - Python style guide checker imported - https://pypi.org/project/pep8/ 
+All code validated and where lines were showing as too long they were adjust. There are no issues to report from the linter of PEP8
+<img src="documentation/testingwithlinter1.png" alt="Testing Linter Page">
 
-Validation
-PEP8 - Python style guide checker imported - https://pypi.org/project/pep8/ All code validated and where lines were showing as too long they were adjusted. Some line adjustments caused bugs in the code and it stopped working so they were left as longer lines to avoid this issue. pycodestyle . - was used in Codeanywhere terminal to list any issues.
-
-Deployment
-
-
-Bugs
-After importing the type element so that text can be typed out a line at a time the codes for Fore.WHITE or bold kept showing up e.g. '\033[1m' for bold was typed out. To fix this I had to remove - colorama.init(autoreset=True) - which meant I had to go through each line of code to ensure if one line was red, all subsequent lines didn't turn red.
+### Bugs
+No  issues to report.
 
 ## Deployment
 
-The site was deployed to GitHub Pages. The steps to deploy are as follows:
+The site was deployed to Heroku. The steps to deploy are as follows:
 
 ### Heroku
 The Application has been deployed from GitHub to Heroku by following the steps:
@@ -100,7 +98,7 @@ The Application has been deployed from GitHub to Heroku by following the steps:
 - Create a new app, add a unique app name ( for example corri-construction-p3) and then choose your region
 - Click on create app
 - Go to "Settings"
-- Under Config Vars add the private API key information using key 'CRED' and into the value area copy the API key information added to the .json file. Also add a key 'PORT' and value '8000'.
+- Under Config Vars add the private API key information using key 'CRED' and into the value area copy the API key information added to the .json file. - Also add a key 'PORT' and value '8000'.
 - Add required buildpacks (further dependencies). For this project, set it up so Python will be on top and Node.js on bottom
 - Go to "Deploy" and select "GitHub" in "Deployment method"
 - To connect Heroku app to your Github repository code enter your repository name, click 'Search' and then 'Connect' when it shows below.
@@ -130,14 +128,14 @@ The Application has been deployed from GitHub to Heroku by following the steps:
    - `git clone https://github.com/Uche05/ci-p2-Uche's PAS(Product Sales Aid).git`
 7. Press Enter to create your local clone.
 
-For Gitpod users, this was not implemented on gitpod, it was from my local PC directly to Github via git and some useful VSCode extensions.
+For Gitpod users, this was implemented on gitpod, it was from gitpod to an SSH Connection on my local PC directly to Github via git and some useful VSCode extensions.
 
 #### Forking
 
 By forking the GitHub Repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original owner's repository.
 You can fork this repository by using the following steps:
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Uche05/ci-p2-Uche's PAS(Product Sales Aid)).
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/Uche05/ProductSalesAid).
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account.
 
